@@ -220,14 +220,27 @@ public class Tela : Form
 
     private void DesenharInstrucoes(Graphics g)
     {
-        // TODO (Grupo 3): deixar as instruções mais completas e bonitas
-        Centro(g, "INSTRUÇÕES", 80, _fTitulo, Brushes.DarkGreen);
-        Centro(g, "Setas ou A / D: mover o personagem", 190, _fTexto, Brushes.Black);
-        Centro(g, "Pegue alimentos saudáveis: dão pontos e vida", 230, _fTexto, Brushes.Black);
-        Centro(g, "Fast foods tiram vida e enchem o estômago", 270, _fTexto, Brushes.Black);
-        Centro(g, "Pegue o item dourado da fase e responda o quiz", 310, _fTexto, Brushes.Black);
-        Centro(g, "P: pausar", 350, _fTexto, Brushes.Black);
-        Centro(g, "Aperte qualquer tecla para voltar", 460, _fTexto, Brushes.Gray);
+        using var fundo = new SolidBrush(Color.FromArgb(225, 255, 255, 255));
+        g.FillRectangle(fundo, 40, 40, Jogo.Largura - 80, Jogo.Altura - 80);
+
+        Centro(g, "INSTRUÇÕES", 55, _fTitulo, Brushes.DarkGreen);
+
+        string[] linhas =
+        {
+            "OBJETIVO: pegue Semente, Manual e Água e cultive a cenoura.",
+            "MOVER: setas ou A / D.     PAUSAR: P.     QUIZ: teclas 1, 2 e 3.",
+            "Alimentos saudáveis dão PONTOS e VIDA.",
+            "Fast foods tiram VIDA e enchem o ESTÔMAGO.",
+            "O Suco Detox esvazia o estômago.",
+            "O item dourado da fase leva ao QUIZ. Errar custa 10 de vida.",
+            "Você perde se a vida zerar ou o estômago encher.",
+            "Na Fase 3, cuidado com o Rei do Combo!",
+        };
+
+        for (int i = 0; i < linhas.Length; i++)
+            g.DrawString(linhas[i], _fPequena, Brushes.Black, 70, 150 + i * 36);
+
+        Centro(g, "Aperte qualquer tecla para voltar", 480, _fTexto, Brushes.Gray);
     }
 
     private void DesenharQuiz(Graphics g)
@@ -235,7 +248,7 @@ public class Tela : Form
         using var fundo = new SolidBrush(Color.FromArgb(225, 255, 255, 255));
         g.FillRectangle(fundo, 60, 120, Jogo.Largura - 120, 300);
 
-        Pergunta p = _jogo.FaseAtual.Pergunta;
+        Pergunta p = _jogo.PerguntaAtual;
         Centro(g, "QUIZ", 135, _fTitulo, Brushes.DarkGreen);
         Centro(g, p.Enunciado, 215, _fTexto, Brushes.Black);
         for (int i = 0; i < p.Alternativas.Length; i++)

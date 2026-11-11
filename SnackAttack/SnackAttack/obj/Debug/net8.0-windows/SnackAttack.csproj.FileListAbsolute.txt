@@ -1,0 +1,16 @@
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\bin\Debug\net8.0-windows\SnackAttack.deps.json
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\bin\Debug\net8.0-windows\SnackAttack.runtimeconfig.json
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\bin\Debug\net8.0-windows\SnackAttack.runtimeconfig.dev.json
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\bin\Debug\net8.0-windows\SnackAttack.dll
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\bin\Debug\net8.0-windows\SnackAttack.pdb
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.AssemblyInfoInputs.cache
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.AssemblyInfo.cs
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.sourcelink.json
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.dll
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\refint\SnackAttack.dll
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.pdb
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.genruntimeconfig.cache
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\ref\SnackAttack.dll
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAtt.5A16D552.Up2Date

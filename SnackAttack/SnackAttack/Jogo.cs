@@ -19,6 +19,7 @@ public class Jogo
     public List<ObjetoQueCai> Objetos { get; } = new();
     public Boss? Boss { get; private set; }
     public string Mensagem { get; private set; } = "";
+    public Pergunta PerguntaAtual { get; private set; } = null!;
     public int Direcao { get; set; }              // a Tela preenche: -1, 0 ou 1
 
     private readonly Random _rnd = new();
@@ -32,25 +33,44 @@ public class Jogo
         Fases = CriarFases();
     }
 
-    // TODO (Grupo 3): escrever mais perguntas e ajustar textos e dificuldade das fases
     private static List<Fase> CriarFases() => new()
     {
-        new Fase("Fase 1 - Parkour", "Pegue a SEMENTE entre as comidas!", "Semente",
-            new Pergunta("Qual vitamina é rica na cenoura?", new[] { "Vitamina A", "Vitamina K", "Vitamina D" }, 0),
+        new Fase("Fase 1 - Parkour", "Salte pelas comidas e conquiste a SEMENTE!", "Semente",
+            new List<Pergunta>
+            {
+                new Pergunta("Qual vitamina é rica na cenoura?", new[] { "Vitamina A", "Vitamina K", "Vitamina D" }, 0),
+                new Pergunta("Qual destes é uma fruta?", new[] { "Batata frita", "Banana", "Hambúrguer" }, 1),
+                new Pergunta("Qual vitamina a laranja tem?", new[] { "Vitamina B12", "Vitamina K", "Vitamina C" }, 2),
+                new Pergunta("A cenoura ajuda a proteger o quê?", new[] { "As unhas", "A visão", "Os cabelos" }, 1),
+            },
             intervaloSpawn: 0.9, chanceFastFood: 0.30),
-        new Fase("Fase 2 - Labirinto", "Pegue o MANUAL de cultivo!", "Manual",
-            new Pergunta("Qual destes alimentos é saudável?", new[] { "Batata frita", "Brócolis", "Refrigerante" }, 1),
-            intervaloSpawn: 0.8, chanceFastFood: 0.40),
-        new Fase("Fase 3 - Lago", "Pegue a ÁGUA! Cuidado com o Rei do Combo!", "Água",
-            new Pergunta("Por que reduzir fast food faz bem?", new[] { "Dá sono", "Tem muito açúcar e gordura", "Não tem sabor" }, 1),
-            intervaloSpawn: 0.9, chanceFastFood: 0.30, temBoss: true),
+        new Fase("Fase 2 - Labirinto", "Desvende o labirinto e ache o MANUAL secreto!", "Manual",
+            new List<Pergunta>
+            {
+                new Pergunta("Qual opção forma um lanche equilibrado?", new[] { "Refrigerante e salgadinho", "Só bala", "Fruta e iogurte" }, 2),
+                new Pergunta("Qual bebida é melhor para matar a sede?", new[] { "Água", "Refrigerante", "Milk-shake" }, 0),
+                new Pergunta("O que devemos fazer antes de comer?", new[] { "Pular o almoço", "Lavar as mãos", "Comer mais doces" }, 1),
+                new Pergunta("Qual alimento costuma ter fibras?", new[] { "Biscoito recheado", "Bala", "Feijão" }, 2),
+            },
+            intervaloSpawn: 0.75, chanceFastFood: 0.45),
+        new Fase("Fase 3 - Lago", "Encare o Rei do Combo e resgate a ÁGUA!", "Água",
+            new List<Pergunta>
+            {
+                new Pergunta("Qual destes costuma ter muito açúcar?", new[] { "Água", "Refrigerante", "Pepino" }, 1),
+                new Pergunta("Comer fast food em excesso pode trazer o quê?", new[] { "Mais energia sempre", "Ossos mais fortes", "Problemas de saúde" }, 2),
+                new Pergunta("Qual escolha tem menos gordura?", new[] { "Maçã fresca", "Batata frita", "Hambúrguer duplo" }, 0),
+                new Pergunta("O que pode acontecer ao consumir muito açúcar?", new[] { "Melhora a visão", "Aumenta o risco de cáries", "Fortalece os dentes" }, 1),
+            },
+            intervaloSpawn: 0.65, chanceFastFood: 0.25, temBoss: true),
     };
 
     // ---------------- Navegação ----------------
 
     public void NovoJogo(string nome = "Herói")
     {
+        var habilidades = Jogador?.Habilidades.ToList() ?? new List<string>();
         Jogador = new Jogador(nome, Largura, Altura);
+        foreach (string habilidade in habilidades) Jogador.AdicionarHabilidade(habilidade);
         FaseIndex = 0;
         IniciarFase();
     }
@@ -106,6 +126,7 @@ public class Jogo
                 if (o is ItemChave)
                 {
                     Objetos.Clear();
+                    PerguntaAtual = FaseAtual.Perguntas[_rnd.Next(FaseAtual.Perguntas.Count)];
                     Estado = Estado.Quiz;
                     Mensagem = "";
                     return;
@@ -170,12 +191,15 @@ public class Jogo
     {
         if (Estado != Estado.Quiz) return false;
 
-        if (alternativa == FaseAtual.Pergunta.Correta)
+        if (alternativa == PerguntaAtual.Correta)
         {
             Jogador.GanharPontos(20);
-            FaseIndex++;
-            if (FaseIndex >= Fases.Count) Estado = Estado.Cidade;
-            else IniciarFase();
+            if (FaseIndex == Fases.Count - 1) Estado = Estado.Cidade;
+            else
+            {
+                FaseIndex++;
+                IniciarFase();
+            }
             return true;
         }
 

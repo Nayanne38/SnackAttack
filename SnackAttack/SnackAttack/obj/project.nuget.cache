@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "zRUtsLh8lo8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Igor\\Documents\\GitHub\\SnackAttack\\SnackAttack\\SnackAttack\\SnackAttack.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.34\\microsoft.netcore.app.ref.8.0.34.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.34\\microsoft.windowsdesktop.app.ref.8.0.34.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.34\\microsoft.aspnetcore.app.ref.8.0.34.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.34\\microsoft.netcore.app.host.win-x64.8.0.34.nupkg.sha512"
+  ],
+  "logs": []
+}
