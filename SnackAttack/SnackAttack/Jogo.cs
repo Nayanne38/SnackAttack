@@ -38,10 +38,10 @@ public class Jogo
         new Fase("Fase 1 - Plantio", "Cuidado com os fast-foods e pegue a SEMENTE!", "Semente",
             new List<Pergunta>
             {
-                new Pergunta("Qual vitamina é rica na cenoura?", new[] { "Vitamina A", "Vitamina K", "Vitamina D" }, 0),
-                new Pergunta("Qual destes é uma fruta?", new[] { "Batata frita", "Banana", "Hambúrguer" }, 1),
-                new Pergunta("Qual vitamina a laranja tem?", new[] { "Vitamina B12", "Vitamina K", "Vitamina C" }, 2),
-                new Pergunta("A cenoura ajuda a proteger o quê?", new[] { "As unhas", "A visão", "Os cabelos" }, 1),
+                new Pergunta("Qual destes costuma ter muito açúcar?", new[] { "Água", "Refrigerante", "Pepino" }, 1),
+                new Pergunta("Comer fast food em excesso pode trazer o quê?", new[] { "Mais energia sempre", "Ossos mais fortes", "Problemas de saúde" }, 2),
+                new Pergunta("Qual escolha tem menos gordura?", new[] { "Maçã fresca", "Batata frita", "Hambúrguer duplo" }, 0),
+                new Pergunta("O que pode acontecer ao consumir muito açúcar?", new[] { "Melhora a visão", "Aumenta o risco de cáries", "Fortalece os dentes" }, 1),
             },
             intervaloSpawn: 0.9, chanceFastFood: 0.30),
         new Fase("Fase 2 - Aprender", "Sobreviva e ache o MANUAL secreto para aprender a plantar!", "Manual",
@@ -56,10 +56,10 @@ public class Jogo
         new Fase("Fase 3 - Lago", "Encare o Rei do Combo e pegue ÁGUA!", "Água",
             new List<Pergunta>
             {
-                new Pergunta("Qual destes costuma ter muito açúcar?", new[] { "Água", "Refrigerante", "Pepino" }, 1),
-                new Pergunta("Comer fast food em excesso pode trazer o quê?", new[] { "Mais energia sempre", "Ossos mais fortes", "Problemas de saúde" }, 2),
-                new Pergunta("Qual escolha tem menos gordura?", new[] { "Maçã fresca", "Batata frita", "Hambúrguer duplo" }, 0),
-                new Pergunta("O que pode acontecer ao consumir muito açúcar?", new[] { "Melhora a visão", "Aumenta o risco de cáries", "Fortalece os dentes" }, 1),
+                new Pergunta("Qual vitamina é rica na cenoura?", new[] { "Vitamina A", "Vitamina K", "Vitamina D" }, 0),
+                new Pergunta("Qual destes não é uma fruta?", new[] { "Tomate", "Cenoura", "Berinjela" }, 1),
+                new Pergunta("Qual vitamina a laranja tem?", new[] { "Vitamina B12", "Vitamina K", "Vitamina C" }, 2),
+                new Pergunta("A cenoura ajuda a proteger o quê?", new[] { "As unhas", "A visão", "Os cabelos" }, 1),
             },
             intervaloSpawn: 0.65, chanceFastFood: 0.60, temBoss: true),
     };
