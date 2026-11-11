@@ -35,7 +35,7 @@ public class Jogo
 
     private static List<Fase> CriarFases() => new()
     {
-        new Fase("Fase 1 - Parkour", "Salte pelas comidas e conquiste a SEMENTE!", "Semente",
+        new Fase("Fase 1 - Plantio", "Cuidado com os fast-foods e pegue a SEMENTE!", "Semente",
             new List<Pergunta>
             {
                 new Pergunta("Qual vitamina é rica na cenoura?", new[] { "Vitamina A", "Vitamina K", "Vitamina D" }, 0),
@@ -44,7 +44,7 @@ public class Jogo
                 new Pergunta("A cenoura ajuda a proteger o quê?", new[] { "As unhas", "A visão", "Os cabelos" }, 1),
             },
             intervaloSpawn: 0.9, chanceFastFood: 0.30),
-        new Fase("Fase 2 - Labirinto", "Desvende o labirinto e ache o MANUAL secreto!", "Manual",
+        new Fase("Fase 2 - Aprender", "Sobreviva e ache o MANUAL secreto para aprender a plantar!", "Manual",
             new List<Pergunta>
             {
                 new Pergunta("Qual opção forma um lanche equilibrado?", new[] { "Refrigerante e salgadinho", "Só bala", "Fruta e iogurte" }, 2),
@@ -53,7 +53,7 @@ public class Jogo
                 new Pergunta("Qual alimento costuma ter fibras?", new[] { "Biscoito recheado", "Bala", "Feijão" }, 2),
             },
             intervaloSpawn: 0.75, chanceFastFood: 0.45),
-        new Fase("Fase 3 - Lago", "Encare o Rei do Combo e resgate a ÁGUA!", "Água",
+        new Fase("Fase 3 - Lago", "Encare o Rei do Combo e pegue ÁGUA!", "Água",
             new List<Pergunta>
             {
                 new Pergunta("Qual destes costuma ter muito açúcar?", new[] { "Água", "Refrigerante", "Pepino" }, 1),

@@ -14,3 +14,4 @@ C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net
 C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAttack.genruntimeconfig.cache
 C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\ref\SnackAttack.dll
 C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\obj\Debug\net8.0-windows\SnackAtt.5A16D552.Up2Date
+C:\Users\Igor\Documents\GitHub\SnackAttack\SnackAttack\SnackAttack\bin\Debug\net8.0-windows\SnackAttack.exe
