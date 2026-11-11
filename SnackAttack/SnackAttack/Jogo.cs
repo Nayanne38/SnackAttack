@@ -61,7 +61,7 @@ public class Jogo
                 new Pergunta("Qual escolha tem menos gordura?", new[] { "Maçã fresca", "Batata frita", "Hambúrguer duplo" }, 0),
                 new Pergunta("O que pode acontecer ao consumir muito açúcar?", new[] { "Melhora a visão", "Aumenta o risco de cáries", "Fortalece os dentes" }, 1),
             },
-            intervaloSpawn: 0.65, chanceFastFood: 0.25, temBoss: true),
+            intervaloSpawn: 0.65, chanceFastFood: 0.60, temBoss: true),
     };
 
     // ---------------- Navegação ----------------
